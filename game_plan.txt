@@ -1,0 +1,21 @@
+
+Goals
+- Crawl links
+- Check if item is in stock
+- Notify user with link
+
+
+Class Needs
+- Scrap websites
+- Parse data 
+- read json data 
+- Save/store data 
+- for loop going through each link, if out of stock, continue to the next link
+else save in set/hasmap as true for link
+
+Classes:
+- Read json file and call for requests
+- Parsing data, reading html5 with css/xpath 
+- Send text message with stored data
+- 
+
