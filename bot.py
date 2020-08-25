@@ -92,7 +92,18 @@ class Bot(object):
 
     def start_scrapying_process(self,links):
         proxies = self.get_proxies()
-        proxy = random.choice(proxies)
+        #Proxy is empty, perhaps site is down or xpath is outdated
+        if proxies:
+            proxy = random.choice(proxies)
+        else:
+            proxy = {
+              'http': '196.54.60.184',
+              'http': '212.129.5.171',
+              'https': '198.50.163.192',
+              'https': '103.87.170.113',
+              'https' :  '144.217.101.245',
+              'https' :  '176.56.107.210'
+            }
 
         for link in links:
             try:

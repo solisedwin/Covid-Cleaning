@@ -12,8 +12,10 @@ class WebParser(object):
         return soup
 
     def item_stock_status(self,soup,link):
-        is_in_stock = soup.find('span', class_='a-size-medium a-color-success')
-        if is_in_stock:
+       # is_in_stock = soup.find('span', class_='a-size-medium a-color-success')
+        is_in_stock = soup.select('.a-size-medium.a-color-success')
+        add_to_cart_available = soup.select('.a-button-input.a-declarative')
+        if is_in_stock or add_to_cart_available:
             print('~~~ Item is in stock!!')
             self.stocked_product_links.append(link)
         else:
